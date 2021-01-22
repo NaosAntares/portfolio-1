@@ -1,0 +1,30 @@
+.navigation {
+    width: 93.3vw;
+    // margin-left: auto;
+    // margin-right: auto;
+    margin: 1em auto 0 auto;
+    display: flex;
+    align-items: center;
+    
+    .nav-link-container {
+        min-width: 24.2vw;
+        display: flex;
+        justify-content: space-around;
+
+        .nav-link {
+            margin-left: 2em;
+            cursor: pointer;
+            z-index: 100;
+        }
+    }
+
+    .clock-container {
+        position: absolute;
+        right: 55px;
+        display: flex;
+
+        .clock {
+            margin: 0 !important;
+        }
+    }
+}

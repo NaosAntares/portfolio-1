@@ -1,0 +1,36 @@
+@import '../../config/breakpoints';
+
+@include media("<=desktop") {
+    .hero-header-title {
+        top: 14vh !important;
+        font-size: 8em;
+    }
+
+    li, p, h3, span {
+        font-family: $body-font;
+        color: #FFF;
+        font-size: 1.2em;
+    }
+
+    .section-title {
+        font-size: 6em;
+    }
+    
+    .project-name {
+        font-size: 2.5em;
+    }
+
+    .btn {
+        padding: 10px 20px !important;
+    }
+
+    .profile {
+        width: 44.27vw;
+    }
+
+    .hero-headline {
+        width: 500px !important;
+        bottom: 30vh !important;
+        font-size: 2em !important;
+    }
+}

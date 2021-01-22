@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kevin González</title>
+	<link rel="stylesheet" href="https://use.typekit.net/yae0eed.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/base.css" /> -->
+	<link rel="stylesheet" type="text/css" href="scss/main.css" />
+</head>
+
+<body class="loading">
+	<main>
+		<!-- begin scrollable -->
+		<header >
+			<nav class="navigation">
+				<img src="assets/logo.png" alt="">
+				<ul class="nav-link-container">
+					<li class="nav-link"><a href="#work">Work</a></li>
+					<li class="nav-link"><a href="#about">About</a></li>
+					<li class="nav-link"><a href="#contact">Contact</a></li>
+					<li class="nav-link"><a href="resumegoeshere">Resume</a></li>
+				</ul>
+				<div class="clock-container">
+					<p class="clock" id="clock-quote"> — </p>
+					<p class="clock" id="clock"></p>
+				</div>
+			</nav>
+		</header>
+		<section class="hero-section">
+			<header class="hero-header">
+				<h1 class="hero-header-title">Kevin González</h1>
+			</header>
+			<div class="hero-image-container" id="container">
+				<img src="assets\asset.jpg" alt="" class="hero-image" id="texture">
+			</div>
+			<p class="hero-headline">I’m a front end developer with a passion for desgin and arts, based on México.</p>
+			<div class="cta-container">
+				<p class="cta">See my work</p>
+				<img src="assets/arrow.png" alt="" class="cta-arrow">
+			</div>
+		</section>
+		<section class="work-section" id="work">
+			<header class="section-header">
+				<h2 class="section-title">selected work</h2>
+			</header>
+			<article class="project-container 1 reverse">
+				<div class="text-container">
+					<header>
+						<h3 class="project-name">TeaLeaf</h3>
+					</header>
+					<div class="description-container">
+						<p class="project-description">E-commerce site for a fictional tea brand. This site is using React+MaterialUI, CommerceJS as the API and Stripe to process paymentss.</p>
+					</div>
+					<div class="btn-container">
+						<a href="https://github.com/NaosAntares/e-commerce"><button class="btn">Code</button></a>
+						<a href="https://bostonteabar.netlify.app/"><button class="btn">Live demo</button></a>
+					</div>
+				</div>
+				<img src="assets/tealeaf.png" alt="" class="project-image">
+			</article>
+			<article class="project-container">
+				<div class="text-container">
+					<header>
+						<h3 class="project-name">Awwwards rebuilt</h3>
+					</header>
+					<p class="project-description">A recreation of MelRiver's (a design agency) landing page, a page that won SOTM on Awwwards. It’s done in React and some GSAP for the animations. </p>
+					<div class="btn-container">
+						<a href="https://github.com/NaosAntares/awww-build-1"><button class="btn">Code</button></a>
+						<a href="https://melriverr-portfolio.netlify.app/"><button class="btn">Live demo</button></a>
+					</div>
+				</div>
+				<img src="assets/agency.png" alt="" class="project-image">
+			</article>
+			<article class="project-container reverse">
+				<div class="text-container">
+					<header>
+						<h3 class="project-name">This portfolio!</h3>
+					</header>
+					<p class="project-description">My first portfolio done in pure HTML, SASS and JS (for some ThreeJS/WebGL stuff).</p>
+					<div class="btn-container">
+						<a href="https://github.com/NaosAntares/awww-build-1"><button class="btn">Code</button></a>
+						<a href="https://melriverr-portfolio.netlify.app/"><button class="btn">Live demo</button></a>
+					</div>
+				</div>
+				<img src="assets/portfolio.png" alt="" class="project-image">
+			</article>
+		</section>
+		<section class="about-section" id="about">
+			<header class="section-header">
+				<h2 class="section-title">about</h3>
+			</header>
+			<article class="project-container">
+				<div class="text-container">
+					<p class="about-text">I’m really into CSS and styling stuff, recently I started learning animation and UI design.
+						I love bending the rules of CSS, making generative art, and playing with ThreeJS/WebGL. <br>I'm looking for any opportunity involving front-end but I'm also available for freelance works. I spend my non-code time reading, painting and drawing.
+					I constantly want to meet new people (which is weird because I tend to be pretty shy), because every one has a story to tell and I love hearing stories. Catch me to tell me yours!</p>
+					
+				</div>
+				<div class="image-container">
+					<img class="project-image profile" src="assets/profile.jpg" alt=""> 
+				</div>
+			</article>
+		</section>
+		<section class="contact-section" id="contact">
+			<header class="section-header">
+				<h2 class="section-title">contact</h3>
+			</header>
+			<article class="project-container">
+				<div class="text-container no-margin center">
+					<p class="about-text">I hate working alone, so contact me if you're looking for collaborations or it's cool to just say hi too.</p>
+					<ul class="social-links-container">
+						<li><a href=""><img src="assets/iconmonstr-github-1.png" class="icon" alt=""></a></li>
+						<li><a href=""><img src="assets/linkedin-icon.png" class="icon" alt=""></a></li>
+						<li><a href="">hey@kevin.com</a></li>
+					</ul>
+				</div>
+			</article>
+		</section>
+	</main>
+	<div id="container"></div>
+	<script src="js/threeEffect.js"></script>
+	<script src="js/clock.js"></script>
+	<script src="js/animation.js"></script>
+</body>
+
+</html>

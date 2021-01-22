@@ -1,17 +1,16 @@
 import * as THREE from "three";
-import EffectComposer, {
-    RenderPass,
-    ShaderPass,
-} from '@johh/three-effectcomposer';
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
+import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
+import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass';
 
     var camera, scene, renderer, composer,renderPass,customPass;
     var geometry, material, mesh, texture,uMouse = new THREE.Vector2(0,0);
-    var img = document.getElementById('texture');
+    var img = document.getElementById('texture');    
 
     let dummyimg = document.createElement("img");
     dummyimg.onload = function(){
       document.body.classList.remove('loading')
-      img.style.opacity = 0;
+      img.style.display = 'none';
       texture = new THREE.Texture( this );
       texture.needsUpdate = true;
       
@@ -26,25 +25,27 @@ import EffectComposer, {
       camera.position.z = 0.5;
 
       scene = new THREE.Scene();
+      scene.background = new THREE.Color( 0x171717 );
 
-      geometry = new THREE.PlaneGeometry( 0.45, 0.3);
+      geometry = new THREE.PlaneGeometry( 1.5, 0.5625);
       material = new THREE.MeshBasicMaterial({
         map: texture
       });
       mesh = new THREE.Mesh( geometry, material );
       scene.add( mesh );
 
-      renderer = new THREE.WebGLRenderer( { antialias: true } );
+      let canvas = document.getElementById("container")
+      renderer = new THREE.WebGLRenderer();
       renderer.setSize( window.innerWidth, window.innerHeight );
       renderer.outputEncoding = THREE.sRGBEncoding;
-      document.body.appendChild( renderer.domElement );
+      canvas.appendChild( renderer.domElement );
 
       // post processing
       composer = new EffectComposer(renderer);
       renderPass = new RenderPass(scene, camera);
       composer.addPass(renderPass);
 
-      var myEffect = {
+      let myEffect = {
         uniforms: {
           "tDiffuse": { value: null },
           "resolution": { value: new THREE.Vector2(1.,window.innerHeight/window.innerWidth) },

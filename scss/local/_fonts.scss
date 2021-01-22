@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+@font-face {
+    font-family: "Bagerich";
+    src: url("./font/Bagerich.ttf") format("ttf");
+}
+
+$title-font: 'Bagerich', serif;
+$body-font: 'Playfair Display', serif;
+
+:root {
+    font-size:16px;
+}
+
+li, p, h3, span {
+    font-family: $body-font;
+    color: #FFF;
+    font-size: 1.5em;
+}
+
+h1, h2 {
+    font-family: $title-font;
+    color: #FFF;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+.hero-header-title {
+    font-size: 12.65em;
+}
+
+.section-title {
+    font-size: 8em;
+}
+
+.project-name {
+    font-size: 3em;
+}
