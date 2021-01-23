@@ -435,6 +435,11 @@ template {
   display: none;
 }
 
+/**
+*
+* Testing
+*
+**/
 .navigation {
   width: 93.3vw;
   margin: 1em auto 0 auto;
@@ -451,6 +456,16 @@ template {
   cursor: pointer;
   z-index: 100;
 }
+.navigation .hamburguer {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 30px;
+  display: none;
+}
+.navigation .hamburguer:focus {
+  outline: none;
+}
 .navigation .clock-container {
   position: absolute;
   right: 55px;
@@ -460,6 +475,17 @@ template {
   margin: 0 !important;
 }
 
+@media (max-width: 540px) {
+  .navigation {
+    justify-content: space-between;
+  }
+  .navigation .nav-link-container {
+    display: none;
+  }
+  .navigation .hamburguer {
+    display: block;
+  }
+}
 /**
 *
 * Testing
@@ -472,24 +498,9 @@ template {
   display: flex;
   justify-content: center;
 }
-.hero-section .hero-header .hero-header-title {
-  margin: 0;
-  z-index: 10;
-  position: absolute;
-  top: 5.33vh;
-  -webkit-user-select: none;
-  /* Safari */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* IE10+/Edge */
-  user-select: none;
-  /* Standard */
-  overflow: hidden;
-}
 .hero-section .hero-image-container {
   display: flex;
-  justify-content: center;
+  justify-self: center;
   align-items: center;
   overflow: hidden;
   margin: 15vh auto 0 auto;
@@ -502,8 +513,8 @@ template {
   bottom: 37.75vh;
   right: 3.5vw;
   font-size: 2.1875em;
-  width: 640px;
   text-align: right;
+  width: 640px;
   -webkit-user-select: none;
   /* Safari */
   -moz-user-select: none;
@@ -524,6 +535,22 @@ template {
   align-self: center;
   height: 5.4vh;
   width: auto;
+}
+
+.hero-header-title {
+  margin: 0;
+  z-index: 10;
+  position: absolute;
+  top: 5.33vh;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+  overflow: hidden;
 }
 
 .section-header {
@@ -584,7 +611,6 @@ template {
   margin: 0;
   padding: 0;
   width: 44.27vw;
-  height: 60.35vh;
 }
 .project-container .image-container .profile {
   flex-shrink: 0;
@@ -602,12 +628,12 @@ template {
 
 .social-links-container {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   align-self: center;
   margin-top: 50px;
-  width: 400px;
+  width: 50vw;
 }
 
 .no-margin {
@@ -627,14 +653,8 @@ template {
 **/
 @media (max-width: 1366px) {
   .hero-header-title {
-    top: 14vh !important;
+    top: 14vh;
     font-size: 8em;
-  }
-
-  li, p, h3, span {
-    font-family: "Playfair Display", serif;
-    color: #FFF;
-    font-size: 1.2em;
   }
 
   .section-title {
@@ -653,10 +673,89 @@ template {
     width: 44.27vw;
   }
 
-  .hero-headline {
-    width: 500px !important;
-    bottom: 30vh !important;
-    font-size: 2em !important;
+  .hero-section .hero-headline {
+    font-size: 2em;
+  }
+}
+@media (max-width: 980px) {
+  .project-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-container .text-container {
+    margin-left: 0;
+  }
+  .project-container .project-image {
+    margin-top: 5vh;
+    width: 81vw;
+  }
+}
+@media (max-width: 1090px) {
+  .clock-container, .clock {
+    display: none;
+  }
+}
+@media (max-width: 850px) and (min-width: 376px) {
+  .hero-header-title {
+    top: 14vh;
+    font-size: 6em;
+  }
+}
+@media (max-width: 700px) and (min-width: 376px) {
+  .hero-section .hero-headline {
+    font-size: 2em;
+  }
+  .hero-section .cta-container {
+    margin-top: 8vh;
+  }
+}
+@media (max-width: 650px) and (min-width: 376px) {
+  .hero-header-title {
+    top: 15vh;
+    font-size: 5em;
+  }
+
+  .section-title {
+    font-size: 5em;
+  }
+
+  .hero-section .hero-headline {
+    font-size: 2em;
+    width: 450px;
+  }
+}
+@media (max-width: 580px) {
+  .hero-section .hero-headline {
+    width: 50vw;
+    font-size: 1.5em;
+  }
+
+  li, p, h3, span {
+    font-family: "Playfair Display", serif;
+    color: #FFF;
+    font-size: 1em;
+  }
+}
+@media (max-width: 520px) {
+  .hero-header-title {
+    font-size: 4em;
+    top: 17vh;
+  }
+
+  .hero-section .hero-headline {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 375px) {
+  .hero-header-title {
+    font-size: 3em;
+    top: 20vh;
+  }
+
+  .hero-section .hero-headline {
+    bottom: 25vh;
+    font-size: 1.2em;
   }
 }
 

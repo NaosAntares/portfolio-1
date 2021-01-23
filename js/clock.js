@@ -27,9 +27,9 @@ function updateTime(k) { /* appending 0 before time elements if less than 10 */
 function setQuote() {
   let date = new Date();
   let time = date.getHours();
-  if (time >= 9 & time <= 14) {
+  if (time >= 9 & time < 14) {
     document.getElementById("clock-quote").innerText = "What's in for lunch? — ";
-  } else if (time > 14 & time < 17) {
+  } else if (time >= 14 & time < 17) {
     document.getElementById("clock-quote").innerText = "Time for a coffe break? — ";
   } else if (time < 9 || time >= 17 ) {
     document.getElementById("clock-quote").innerText = "Working late? — ";

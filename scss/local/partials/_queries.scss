@@ -2,15 +2,9 @@
 
 @include media("<=desktop") {
     .hero-header-title {
-        top: 14vh !important;
-        font-size: 8em;
-    }
-
-    li, p, h3, span {
-        font-family: $body-font;
-        color: #FFF;
-        font-size: 1.2em;
-    }
+                top: 14vh;
+                font-size: 8em;
+            }
 
     .section-title {
         font-size: 6em;
@@ -28,9 +22,110 @@
         width: 44.27vw;
     }
 
-    .hero-headline {
-        width: 500px !important;
-        bottom: 30vh !important;
-        font-size: 2em !important;
+    .hero-section {
+        .hero-headline {
+            font-size: 2em;
+        }
+    }
+}
+
+@include media("<=980px") {
+    .project-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .text-container {
+            margin-left: 0;
+        }
+
+        .project-image {
+            margin-top: 5vh;
+            width: 81vw;
+        }
+    }
+}
+
+@include media("<=1090px") {
+    .clock-container, .clock {
+        display: none;
+    }
+}
+
+@include media("<=850px", ">phone") {
+    .hero-header-title {
+        top: 14vh;
+        font-size: 6em;
+    }
+}
+
+@include media("<=700px", ">phone") {
+    .hero-section {
+        .hero-headline {
+            font-size: 2em;
+        }
+
+        .cta-container {
+            margin-top: 8vh;
+    }
+    }
+}
+
+@include media("<=650px", ">phone") {
+    .hero-header-title {
+        top: 15vh;
+        font-size: 5em;
+    }
+
+    .section-title {
+        font-size: 5em;
+    }  
+    .hero-section {
+        .hero-headline {
+            font-size: 2em;
+            width: 450px;
+        }
+    }
+}
+
+@include media("<=580px") {
+    .hero-section {
+        .hero-headline {
+            width: 50vw;
+            font-size: 1.5em;
+        }
+    }
+
+    li, p, h3, span {
+        font-family: $body-font;
+        color: #FFF;
+        font-size: 1em;
+    }
+}
+
+@include media ("<=520px") {
+    .hero-header-title{
+        font-size: 4em;
+        top: 17vh;
+    }
+    
+    .hero-section {
+        .hero-headline {
+            font-size: 1.2em;
+        }
+    }
+}
+
+@include media("<=phone") {
+    .hero-header-title{
+        font-size: 3em;
+        top: 20vh;
+    }
+    
+    .hero-section {
+        .hero-headline {
+            bottom: 25vh;
+            font-size: 1.2em;
+        }
     }
 }

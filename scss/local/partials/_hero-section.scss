@@ -6,22 +6,11 @@
     .hero-header {
         display: flex;
         justify-content: center;
-        .hero-header-title {
-            margin: 0;
-            z-index: 10;
-            position: absolute;
-            top: 5.33vh;
-            -webkit-user-select: none; /* Safari */        
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* IE10+/Edge */
-            user-select: none; /* Standard */
-            overflow: hidden;
-        }
     }
 
     .hero-image-container {
         display: flex;
-        justify-content: center;
+        justify-self: center;
         align-items: center;
         overflow: hidden;
         margin: 15vh auto 0 auto;
@@ -35,8 +24,8 @@
         bottom: 37.75vh;
         right: 3.5vw;
         font-size: 2.1875em;
-        width: 640px;
         text-align: right;
+        width: 640px;
         -webkit-user-select: none; /* Safari */        
         -moz-user-select: none; /* Firefox */
         -ms-user-select: none; /* IE10+/Edge */
@@ -57,6 +46,18 @@
     }
 }
 
+.hero-header-title {
+    margin: 0;
+    z-index: 10;
+    position: absolute;
+    top: 5.33vh;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    overflow: hidden;
+}
+
 .section-header {
     display: flex;        
     justify-content: center;
@@ -73,6 +74,7 @@
     align-items: space-around;
     width: 83.59vw;
     margin: 0 auto 10.78vh auto;
+    
 
     .text-container {
         display: flex;
@@ -119,7 +121,7 @@
         margin: 0;
         padding: 0;
         width: 44.27vw;
-        height: 60.35vh;
+        // height: 60.35vh;
 
         .profile {
             flex-shrink: 0;
@@ -141,13 +143,15 @@
 
 .social-links-container {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
     align-self: center;
     margin-top: 50px;
-    width: 400px;
+    width: 50vw;
 }
+
+
 
 .no-margin {
     margin-right: 0 !important; 
